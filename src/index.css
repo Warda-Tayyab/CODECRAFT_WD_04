@@ -1,0 +1,286 @@
+/* Navigation bar styles */
+/* Base styles for the navbar */
+.navbar {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 10px;
+  background-color: rgb(107,19,19);
+  color: white;
+  z-index: 1000;
+}
+
+.navbar-left {
+  font-size: 1.75rem;
+  font-weight: bold;
+}
+
+.navbar-right ul {
+  list-style-type: none;
+  margin: 0;
+  padding: 0;
+  display: flex;
+  gap: 20px;
+}
+
+.navbar-right ul li {
+  display: inline;
+}
+
+.navbar-right ul li a {
+  text-decoration: none;
+  color: white;
+  font-size: 1.2rem;
+  transition: color 0.3s ease-in-out;
+}
+
+.navbar-right ul li a:hover {
+  color: #f1f1f1;
+}
+
+/* Responsive styles */
+@media (max-width: 1024px) {
+  .navbar {
+    padding: 10px 20px;
+  }
+
+  .navbar-left {
+    font-size: 1.3rem;
+  }
+
+  .navbar-right ul {
+    gap: 15px; /* Adjust spacing between items */
+  }
+
+  .navbar-right ul li a {
+    font-size: 1.1rem;
+  }
+}
+
+@media (max-width: 768px) {
+  .navbar {
+    flex-direction: column;
+    align-items: flex-start;
+    padding: 10px;
+  }
+
+  .navbar-left {
+    font-size: 1.2rem;
+    margin-bottom: 10px;
+  }
+
+  .navbar-right ul {
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+    gap: 10px;
+    padding: 0;
+  }
+
+  .navbar-right ul li {
+    display: block;
+  }
+
+  .navbar-right ul li a {
+    font-size: 1rem;
+  }
+}
+
+@media (max-width: 480px) {
+  .navbar-left {
+    font-size: 1.1rem;
+  }
+
+  .navbar-right ul {
+    gap: 8px; /* Adjust spacing for very small screens */
+  }
+
+  .navbar-right ul li a {
+    font-size: 0.9rem;
+  }
+}
+
+.highlight-name {
+  font-weight: bold; /* Makes the text bold */
+  color: rgb(107,19,19); /* Adds the reddish color */
+}
+
+
+body{
+  font-family: Arial, Helvetica, sans-serif;
+}
+h2{
+ font-family: Montserrat;
+}
+
+.under{
+  padding-top: 10px;
+}
+
+span{
+  color:rgb(107,19,19);
+}
+/*.div
+{
+  background-color:#f1f1f1;
+/*  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  min-height: 100vh; /* Ensures the div takes the full height of the viewport */
+/*  text-align: center;---
+margin-bottom: 40px;
+}*/
+.div {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 20px;
+  background-color: #f1f1f1; /* Replace with the previous background color if needed */
+
+}
+
+.intro {
+  max-width: 50%;
+}
+
+.intro h1 {
+  font-size: 24px;
+  text-align: left;
+}
+
+.intro p {
+  margin-top: 10px;
+}
+
+.img-container {
+  max-width: 50%;
+}
+
+.img-container img {
+  width: 100%;
+  height: auto;
+  display: block;
+}
+
+.btn {
+
+ background-color: rgb(107, 19, 19);
+  border: none;
+  color: white;
+  padding: 8px 16px; /* Smaller padding for a smaller button */
+  text-align: center;
+  text-decoration: none;
+  display: inline-block;
+  font-size: 14px; /* Smaller font size */
+  margin: 4px 2px;
+  cursor: pointer;
+  border-radius: 20px; /* Slightly smaller rounded corners */
+}
+
+.btn:hover {
+  background-color:rgb(141, 61, 61);
+}
+.paragraph{
+  color:rgb(107,19,19);
+}
+.page{
+  margin-top: 40px;
+  border: 7px solid rgb(107,19,19);
+  
+}
+.pic{
+  width: 90px;
+  margin-top: 10px;
+  margin-left: 10px;
+}
+.page  li
+{
+list-style: none;
+  
+}
+.btn a{
+  color: white;
+text-decoration: none;
+}
+a{
+  color: white;
+
+}
+.education-item {
+  margin-bottom: 20px;
+  color: black;
+}
+.education-item span {
+  display: block;
+  color: black;
+}
+.education-item strong span {
+  font-size: 1.2em;
+  color:rgb(107, 19, 19) ;
+}
+.service-container {
+  display: flex;
+  justify-content: space-between;
+  flex-wrap: wrap;
+}
+
+.service-box {
+  border: 1px solid #eee;
+  padding: 10px;
+  flex-basis: 32%;
+  max-width: 370px;
+  margin-bottom: 15px;
+  display: flex;
+  flex-direction: column;
+}
+
+.service-box img {
+  width: 100%;
+}
+/* Default styles for larger screens (desktops) */
+.service-container {
+  display: flex;
+  justify-content: space-between;
+  flex-wrap: wrap;
+  gap: 20px;
+}
+
+.service-box {
+  flex: 1;
+  min-width: 300px; /* Ensures the boxes don't get too small */
+  max-width: 45%;
+  text-align: center;
+}
+
+.service-box img {
+  width: 100%;
+  height: auto;
+}
+
+/* Styles for tablets (e.g., iPads) */
+@media (max-width: 1024px) {
+  .service-container {
+      flex-direction: column; /* Stack items vertically on tablets */
+      align-items: center;
+  }
+
+  .service-box {
+      max-width: 70%; /* Wider boxes on tablets */
+  }
+  
+}
+
+/* Styles for small screens (e.g., phones) */
+@media (max-width: 600px) {
+  .service-container {
+      flex-direction: column; /* Stack items vertically */
+      align-items: center;
+  }
+
+  .service-box {
+      max-width: 90%; /* Narrower boxes on phones */
+  }
+}
+
+
